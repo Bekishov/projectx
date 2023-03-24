@@ -1,0 +1,59 @@
+{%extends 'base.html'%}
+{%block content%}
+<head>
+  <title>Мой профиль</title>
+  <style>
+    .profile {
+      margin: 50px auto;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .profile img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .profile h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .profile h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .profile p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .profile ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .profile li {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile">
+    <img src="{{url_for('static', filename='cakes-to-go.jpg')}}" alt="Мое фото">
+    <h1>{{user.name}} {{user.second_name}}</h1>
+    <p>О себе: Я занимаюсь таким-то делом и очень люблю свою работу.</p>
+    <ul>
+      <li>Email: {{user.email}} </li>
+    </ul>
+  </div>
+</body>
+{%endblock%}

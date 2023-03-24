@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primera</title>
+</head>
+<style>
+    body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  transition: all 725ms ease-in-out;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: orange;
+}
+
+button {
+  cursor: pointer;
+  appearance: none;
+  border-radius: 4px;
+  font-size: 1.25rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid brown;
+  background-color: dodgerblue;
+  color: white;
+}
+</style>
+<body>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5000/{{post.id}}/update">Update 
+                </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:5000/{{post.id}}/delete">delete 
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    <div>
+
+    <h1>id: {{ post.id }}</h1>
+    <h1>{{ post.title }}</h1>
+    <h4>{{ post.author }}</h4>
+    <p>{{ post.date }}</p>
+    <p>{{ post.description }}</p>
+    </div>
+</body>
+</html>

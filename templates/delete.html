@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+{%block content%}
+<body> 
+    <h1>Delete post</h1> 
+    <p>Are you sure you want to delete the following post?</p> 
+    <p>Title: {{ post.title }}</p> 
+    <p>Description: {{ post.description }}</p> 
+    <form method="post"> 
+        <button type="submit">Delete</button> 
+    </form> 
+</body> 
+{%endblock%}
